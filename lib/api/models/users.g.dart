@@ -10,7 +10,7 @@ Users _$UsersFromJson(Map<String, dynamic> json) => Users(
       json['username'] as String?,
       json['email'] as String?,
       json['phone'] as String?,
-      json['id'] as String?,
+      (json['id'] as num?)?.toInt(),
       json['name'] as String?,
     );
 

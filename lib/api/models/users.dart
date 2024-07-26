@@ -8,7 +8,7 @@ class Users {
 
   factory Users.fromJson(Map<String, dynamic> json) => _$UsersFromJson(json);
 
-  final String? id;
+  final int? id;
   final String? name;
   final String? username;
   final String? email;

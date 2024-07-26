@@ -9,7 +9,15 @@ part 'api.g.dart';
 abstract class GetHighClient {
   factory GetHighClient(Dio dio, {String baseUrl}) = _GetHighClient;
 
-  @GET('/users')
+  factory GetHighClient.create({String? apiUrl}) {
+    final dio = Dio();
+    if (apiUrl != null) {
+      return GetHighClient(dio, baseUrl: apiUrl);
+    }
+    return GetHighClient(dio);
+  }
+
+  @GET('users')
   Future<List<Users>> getUsers();
 }
 

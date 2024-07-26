@@ -34,7 +34,7 @@ class _GetHighClient implements GetHighClient {
     )
             .compose(
               _dio.options,
-              '/users',
+              'users',
               queryParameters: queryParameters,
               data: _data,
             )

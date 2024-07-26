@@ -18,7 +18,9 @@ class _GetHighAppState extends State<GetHighApp> {
 
   @override
   void initState() {
-    widget.apiClient.getUsers().then((res) => print(res));
+    widget.apiClient.getUsers().then((res) {
+      print(res);
+    });
     super.initState();
   }
 
